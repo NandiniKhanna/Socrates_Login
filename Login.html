@@ -19,7 +19,7 @@
       image.setAttribute('src',googleUser.getBasicProfile().getImageUrl().element.append(image))
     }
                          
-    function signout() {
+    function signOut() {
         gapi.auth2.getAuthInstance().signOut().then(function() {
           console.log('user signed out')
         })
