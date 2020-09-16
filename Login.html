@@ -12,7 +12,10 @@
   <script>
     function onSignIn(googleUser) {
       console.log('User is '+ JSON.stringify(googleUser.getBasicProfile()))
-      document.querySelector('#content').innerText = googleUser.getBasicProfileInfo().getName();
+      var element = document.querySelector('#content')
+      element.innerText = googleUser.getBasicProfile().getName();
+      var image = document.createElement('img')
+      image.setAttribute('src',googleUser.getBasicProfile().getImageUrl().element.append(image)
     }
   </script>
 </html>
