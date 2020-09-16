@@ -8,6 +8,7 @@
     <h1>SOCRATES</h1>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <div id="content"></div>
+    <button onclick="signOut()">Sign Out</button>
   </body>
   <script>
     function onSignIn(googleUser) {
@@ -17,5 +18,11 @@
       var image = document.createElement('img')
       image.setAttribute('src',googleUser.getBasicProfile().getImageUrl().element.append(image)
     }
+                         
+    function signout() {
+        gapi.auth2.getAuthInstance().signOut().then(function() {
+          console.log('user signed out')
+        })
+      }
   </script>
 </html>
