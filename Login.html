@@ -6,6 +6,11 @@
   </head>
   <body>
     <h1>SOCRATES</h1>
-    <div class="g-signin2"></div>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
   </body>
+  <script>
+    function onSignIn(googleUser) {
+      console.log('User is '+ JSON.stringify(googleUser.getBasicProfile))
+    }
+  </script>
 </html>
